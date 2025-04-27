@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+  --text-color: #333;
+  --win-message: #4CAF50;
+  --draw-message: #FF9800;
+  --loss-message: #F44336;
+  --card-backgound: rgba(255, 255, 255, 0.6);
+  --card-border: 2px solid rgba(0, 0, 0, 0.2);
+  --button-bg: #FF4081;
+  --button-hover: #E91E63;
+  --result-bg: linear-gradient(135deg, #FFC107, #FF9800);
+  /* Warm orange gradient */
+  --result-text: #fff;
+  /* White text */
+
+}
+
+.dark-theme {
+  --bg-gradient: linear-gradient(135deg, #1A1A2E, #16213E);
+  --text-color: #FFF;
+  --win-message: #00FF7F;
+  --draw-message: #FFC107;
+  --loss-message: #FF1744;
+  --card-backgound: rgba(255, 255, 255, 0.1);
+  --card-border: 2px solid rgba(255, 255, 255, 0.3);
+  --button-bg: #007BFF;
+  --button-hover: #0056B3;
+  --result-bg: linear-gradient(135deg, #4A148C, #7B1FA2);
+  /* Deep purple gradient */
+  --result-text: #E1BEE7;
+  /* Soft lavender text */
+
+}
+
+
+#icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+
+
+body {
+  background: var(--bg-gradient);
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+}
+
+.container,
+.home {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+.option {
+  margin-top: 50px;
+  display: flex;
+  color: var(--text-color);
+  justify-content: center;
+  gap: 50px;
+}
+
+.play {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--card-backgound);
+  border: var(--card-border);
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.play img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.play p {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.play:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.game-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  gap: 120px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 180px;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.player,
+.computer {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--card-backgound);
+  border: var(--card-border);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.player img,
+.computer img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--result-bg);
+  color: var(--result-text);
+  width: 400px;
+  text-align: center;
+  /* Centers the text */
+  display: flex;
+  /* Enables flexbox */
+  justify-content: center;
+  /* Centers content horizontally */
+  align-items: center;
+  /* Centers content vertically */
+  margin-left: auto;
+  /* Centers the element horizontally */
+  margin-right: auto;
+  /* Centers the element horizontally */
+}
+
+
+button.play-again {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: var(--button-bg);
+  border: none;
+  color: #FFFFFF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button.play-again:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.score,
+.score2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 40px 0px;
+  font-size: 1.3em;
+}
+
+.win {
+  color: var(--win-message);
+}
+
+.draw {
+  color: var(--draw-message);
+}
+
+.loss {
+  color: var(--loss-message);
+}
